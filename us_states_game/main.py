@@ -37,16 +37,12 @@ while len(guessed_states) < 50:
         )
     screen.update()
 
-not_guessed = []
-for state in states_list:
-    if state.title() not in guessed_states:
-        not_guessed.append(state)
-
+not_guessed = [state for state in states_list if (state.title() not in guessed_states)]
 new_data = {
     'States not guessed': not_guessed
 }
 states_not_guessed_df = pd.DataFrame(new_data)
-states_not_guessed_df.to_csv("states_not_guessed.csv")
+states_not_guessed_df.to_csv("us_states_game/states_not_guessed.csv")
 
 
 screen.exitonclick()
