@@ -17,7 +17,7 @@ game_is_on = True
 snake = Snake()
 food = Food()
 scoreboard = ScoreBoard()
-enemy = Enemy()
+# enemy = Enemy()
 
 
 screen.listen()
